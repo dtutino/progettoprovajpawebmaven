@@ -11,11 +11,9 @@ public class CommonEntity {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	protected Long id;
 	@Column(name = "descrizione")
-	private String descrizione;
-	
-	
+	protected String descrizione;
 	
 	public CommonEntity() {
 		super();
@@ -41,7 +39,7 @@ public class CommonEntity {
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
-
+	
 	
 	
 }

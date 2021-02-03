@@ -15,6 +15,14 @@ public class Stato extends CommonEntity {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "stato")
 	private Set<Segnalazione> listaSegnalazioni = new HashSet<>();
 
+	public Stato() {
+		super();
+	}
+
+	public Stato(String descrizione) {
+		super(descrizione);
+	}
+
 	public Set<Segnalazione> getListaSegnalazioni() {
 		return listaSegnalazioni;
 	}
@@ -22,5 +30,12 @@ public class Stato extends CommonEntity {
 	public void setListaSegnalazioni(Set<Segnalazione> listaSegnalazioni) {
 		this.listaSegnalazioni = listaSegnalazioni;
 	}
+
+	@Override
+	public String toString() {
+		return "Stato [descrizione=" + descrizione + "]";
+	}
+	
+	
 
 }

@@ -17,15 +17,15 @@ public class Segnalazione {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="tipo_segnalazione_id")
 	private TipoSegnalazione tipoSegnalazione;
 	@Column(name = "descrizione")
 	private String descrizione;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="localita_id")
 	private Localita localita;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="stato_id")
 	private Stato stato;
 	
@@ -33,12 +33,11 @@ public class Segnalazione {
 		super();
 	}
 
-	public Segnalazione(TipoSegnalazione tipoSegnalazione, String descrizione, Localita localita, Stato stato) {
+	public Segnalazione(TipoSegnalazione tipoSegnalazione, String descrizione, Localita localita) {
 		super();
 		this.tipoSegnalazione = tipoSegnalazione;
 		this.descrizione = descrizione;
 		this.localita = localita;
-		this.stato = stato;
 	}
 
 	public Long getId() {

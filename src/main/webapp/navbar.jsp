@@ -1,5 +1,5 @@
 <!-- navbar -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
@@ -10,19 +10,19 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="index.jsp">Home</a>
-          <a class="dropdown-item" href="ListArticoliServlet">Risultati</a>
-          <a class="dropdown-item" href="PrepareInsertArticoloServlet">Inserisci nuovo elemento</a>
-          <a class="dropdown-item" href="PrepareSearchArticoloServlet">Cerca un articolo</a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownSegnalazione" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Segnalazione</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownSegnalazione">
+          <a class="dropdown-item" href="ListaSegnalazioneServlet">Lista segnalazioni</a>
+          <a class="dropdown-item" href="PrepareInsertSegnalazioneServlet">Inserisci nuova segnalazione</a>
+          <a class="dropdown-item" href="PrepareSearchSegnalazioneServlet">Cerca una segnalazione</a>
+        </div>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownCommon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gestione</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownCommon">
+          <a class="dropdown-item" href="ListTipiSegnalazioneServlet">Tipi segnalazione</a>
+          <a class="dropdown-item" href="ListaLocalitaServlet">Località</a>
+          <a class="dropdown-item" href="ListaStatiServlet">Stati segnalazione</a>
         </div>
       </li>
     </ul>
